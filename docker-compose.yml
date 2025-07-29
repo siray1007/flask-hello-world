@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  hello_world:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hello_world
+    hostname: hello_world
+    ports:
+      - "4000:5000"
+    environment:
+      - FLASK_ENV
